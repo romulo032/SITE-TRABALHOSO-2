@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ODS 10: Redução das Desigualdades</title>
+
+    <style>
+        /* Estilos Globais para um visual limpo e profissional */
+        body {
+            font-family: 'Arial', sans-serif; 
+            background-color: #eef1f6; 
+            color: #333;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            padding-left: 60px; /* Espaço para a barra lateral */
+        }
+
+        /* Estrutura Principal */
+        header, main, footer {
+            width: 85%;
+            max-width: 1100px;
+            margin: 20px auto;
+            padding: 25px 35px;
+            background-color: white;
+            border: 1px solid #ccc; 
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05); 
+        }
+
+        /* Títulos */
+        h1 {
+            color: #004d99; 
+            text-align: center;
+            border-bottom: 3px solid #1e8449; 
+            padding-bottom: 10px;
+            margin-bottom: 30px;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1); 
+        }
+        
+        h2 {
+            color: #1e8449; 
+            padding-top: 15px;
+            border-left: 5px solid #ffc107; 
+            padding-left: 10px;
+            margin-top: 30px;
+        }
+
+        /* Destaque das Seções Internas */
+        .section-box {
+            padding: 20px;
+            margin: 25px 0;
+            border: 1px solid #ddd; 
+            background-color: #f9f9f9;
+            border-radius: 6px;
+        }
+
+        /* Imagens e Vídeo */
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 25px auto;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        iframe {
+            display: block;
+            margin: 25px auto;
+            border: 5px solid #004d99; 
+            border-radius: 4px;
+        }
+
+        /* Rodapé e Link Voltar ao Topo */
+        footer {
+            text-align: center;
+            font-size: 0.9em;
+            color: #666;
+            padding: 15px 35px;
+            border-top: 1px solid #ccc;
+            margin-top: 40px;
+            box-shadow: none; 
+        }
+        
+        .top-link {
+            text-decoration: none;
+            color: #004d99; 
+            font-weight: bold;
+            display: inline-block;
+            margin-top: 10px;
+            transition: color 0.3s ease; 
+        }
+
+        .top-link:hover {
+            color: #ff6600; 
+        }
+        
+        /* ------------------------------------- */
+        /* ESTILOS DA BARRA LATERAL (SIDEBAR) */
+        /* ------------------------------------- */
+
+        /* Esconde o checkbox que usaremos para controlar o estado */
+        #sidebar-toggle {
+            display: none;
+        }
+
+        /* O "Botão" que o usuário vai clicar */
+        .sidebar-label {
+            position: fixed;
+            top: 50%;
+            left: 0;
+            transform: translateY(-50%);
+            width: 50px;
+            height: 100px;
+            background-color: #1e8449; /* Verde de Destaque */
+            color: white;
+            text-align: center;
+            padding: 15px 0;
+            cursor: pointer;
+            z-index: 1000;
+            border-radius: 0 5px 5px 0;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            writing-mode: vertical-rl; /* Texto de lado */
+            text-orientation: mixed;
+            transition: background-color 0.3s;
+        }
+        
+        .sidebar-label:hover {
+            background-color: #004d99; /* Azul marinho no hover */
+        }
+        
+        /* A Barra Lateral com o Conteúdo de Contato */
+        .sidebar-content {
+            position: fixed;
+            top: 0;
+            left: -300px; /* Esconde a barra lateral inicialmente */
+            width: 300px;
+            height: 100%;
+            background-color: #004d99; /* Fundo Azul Marinho */
+            color: white;
+            padding: 20px;
+            box-shadow: 5px 0 15px rgba(0, 0, 0, 0.3);
+            z-index: 999;
+            transition: left 0.5s ease; /* Animação simples de movimento */
+            overflow-y: auto;
+        }
+
+        .sidebar-content h3 {
+            color: #ffc107; /* Destaque amarelo */
+            border-bottom: 2px solid white;
+            padding-bottom: 10px;
+        }
+        
+        /* A MÁGICA DO CSS: Quando o checkbox é marcado, mostra a barra lateral! */
+        #sidebar-toggle:checked ~ .sidebar-content {
+            left: 0; /* Move a barra para a esquerda (mostra) */
+        }
+
+    </style>
+    </head>
+<body>
+
+    <input type="checkbox" id="sidebar-toggle">
+
+    <label for="sidebar-toggle" class="sidebar-label">
+        APOIE A CAUSA
+    </label>
+
+    <aside class="sidebar-content">
+        <h3>Como Apoiar a ODS 10</h3>
+        
+        <p>A sua participação é essencial para a Redução das Desigualdades.</p>
+        
+        <p style="color: #ffc107; font-weight: bold;">Entre em Contato:</p>
+        
+        <ul style="list-style-type: none; padding-left: 0;">
+            <li><strong>Email:</strong> <a href="mailto:contato@ods10projeto.org" style="color: #aed9e0;">contato@ods10projeto.org</a></li>
+            
+            <li><strong>Redes Sociais:</strong> @ODS10_Igualdade</li>
+        </ul>
+        
+        <p><strong>Formas de Contribuição:</strong></p>
+        
+        <ol>
+            <li>Doações a ONGs focadas em equidade e inclusão.</li>
+            <li>Voluntariado em projetos sociais locais.</li>
+            <li>Divulgação e conscientização da Agenda 2030.</li>
+        </ol>
+        
+        <p style="font-size: small; margin-top: 30px; text-align: center;">Juntos, podemos construir um mundo mais justo e igualitário.</p>
+    </aside>
+
+    <header>
+        <h1>Objetivo de Desenvolvimento Sustentável 10</h1>
+        <h2>Redução das Desigualdades</h2>
+        
+        <img src="1633090570604.jpeg" alt="Símbolo da ODS 10: Redução das Desigualdades" width="800" height="400">
+        
+    </header>
+
+    <main>
+        <section id="o-que-e" class="section-box">
+            <h2>O Que é a ODS 10?</h2>
+            <p>A ODS 10 da Agenda 2030 da Organização das Nações Unidas (ONU) é um chamado global para <strong>reduzir a desigualdade dentro dos países e entre eles</strong>. O objetivo principal é garantir que todos, independentemente de sua condição, tenham as mesmas chances de prosperar.</p>
+            <p><strong>Desigualdade</strong> se manifesta de diversas formas: de renda, de acesso a serviços, de gênero, raça, etnia, deficiência, religião e origem, representando uma barreira significativa para o desenvolvimento sustentável global.</p>
+            
+            <img src="19102836_25473_GDO.png" alt="Ilustração de Diversidade e Inclusão" width="400" height="250">
+        </section>
+
+        <section id="metas" class="section-box">
+            <h2>Principais Metas do ODS 10</h2>
+            <p>Para alcançar a redução das desigualdades até 2030, o ODS 10 estabelece metas focadas na inclusão e justiça:</p>
+            
+            <ul>
+                <li>Crescimento da Renda: Aumentar a renda dos 40% da população mais pobre a uma taxa maior que a média nacional..</li>
+                <li>Inclusão e Empoderamento: Promover a inclusão social, econômica e política de todos, sem distinção.</li>
+                <li>Igualdade de Oportunidades: Garantir a igualdade de resultados, eliminando leis e práticas discriminatórias.</li>
+                <li>Políticas Sociais e Fiscais: Adotar políticas para alcançar progressivamente uma maior igualdade, como a fiscal e salarial.</li>
+                <li>Migração Responsável: Facilitar a migração e a mobilidade ordenada, segura e regular das pessoas.</li>
+            </ul>
+        </section>
+
+        <section id="video" class="section-box">
+            <h2>Vídeo Explicativo sobre o ODS 10</h2>
+            <p style="text-align: center;">Assista a um breve vídeo que explica a importância e os desafios da Redução das Desigualdades:</p>
+
+            <iframe 
+                width="560" 
+                height="315" 
+                src="https://www.youtube.com/embed/YI7KSNi10kA" 
+                title="YouTube video player - Redução das Desigualdades - ODS 10" 
+                frameborder="0" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                allowfullscreen>
+            </iframe>
+        
+        </section>
+
+        <section id="como-contribuir" class="section-box">
+            <h2>Como Contribuir?</h2>
+            <p>A luta contra a desigualdade é um esforço contínuo. Sua contribuição é fundamental ao:</p>
+            
+            <ol>
+                <li><strong>Conscientizar:</strong> Informar-se e educar outras pessoas sobre as diversas formas de desigualdade.</li>
+                <li><strong>Agir Localmente:</strong> Apoiar iniciativas e projetos que promovem a inclusão em sua comunidade.</li>
+                <li><strong>Defender Políticas:</strong> Votar e apoiar políticas públicas que buscam a equidade social e econômica, como leis contra a discriminação.</li>
+            </ol>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 - Site Educacional sobre ODS 10.</p>
+        
+        <a href="#o-que-e" class="top-link">
+            &#x2191; Voltar ao Topo
+        </a>
+    </footer>
+
+</body>
+</html>
